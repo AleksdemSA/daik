@@ -1,7 +1,6 @@
 package main
 
 import (
-	"color"
 	"fmt"
 	"log"
 	"os"
@@ -12,24 +11,24 @@ import (
 
 func stage(message string) {
 	fmt.Println()
-	fmt.Println(color.Blue + "##### " + message + " #####" + color.Reset)
+	fmt.Println(Blue + "##### " + message + " #####" + Reset)
 	fmt.Println()
 
 }
 
 func stageSuccess(message string) {
-	fmt.Println(color.Green + message + color.Reset)
+	fmt.Println(Green + message + Reset)
 }
 
 func stageError(message string) {
 	fmt.Println()
-	fmt.Println(color.Red + message + color.Reset)
+	fmt.Println(Red + message + Reset)
 	fmt.Println()
 }
 
 func debug(message string) {
 	fmt.Println()
-	fmt.Println(color.Yellow + message + color.Reset)
+	fmt.Println(Yellow + message + Reset)
 	fmt.Println()
 }
 
@@ -141,7 +140,7 @@ func main() {
 
 	if len(os.Args) != 3 {
 		stage("Developer Access In Kubernetes")
-		stageSuccess("Tool for create config for users in Kubernetes \nWrite, please, namespace and username. Example daik devstand user")
+		stageSuccess("Tool for create config for users in Kubernetes \nWrite, please, namespace and username. Example daik devNamespace developerName")
 		stageSuccess("Example to use config: kubectl --kubeconfig=CONFIGNAME.yml get pods")
 		os.Exit(0)
 	} else {

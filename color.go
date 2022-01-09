@@ -1,4 +1,4 @@
-package color
+package main
 
 import "runtime"
 
